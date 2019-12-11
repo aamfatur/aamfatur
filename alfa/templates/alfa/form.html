@@ -51,23 +51,27 @@ blog
             </div>
         </div>
         <div class="container">
-            <div class="body_content_h4 row align-items-center text-center">
-                <form action="/blog/news" method="post">
-                {% csrf_token %}
-                    <label for="image">Link</label>
-                    <input type="text" name="form_image" id="image">
-                </br>
-                    <label for="title">Titile Blog</label>
-                    <input type="text" name="form_title" id="title">
-                </br>
-                    <label for="date">Date Blog</label>
-                    <input type="date" name="form_date" id="date">
-                </br>
-                    <span>Content</span>
-                    <textarea name="form_content" id="content"></textarea>
-                </br>
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="body_content row align-items-center text-center">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form class="form-group" action="/blog/news" method="post">
+                    {% csrf_token %}
+                        <label for="image">Link</label>
+                        <input class="form-control" type="text" name="form_image" id="image" placeholder="Copy the image location link" required>
+                    </br>
+                        <label for="title">Titile Blog</label>
+                        <input class="form-control" type="text" name="form_title" id="title" required>
+                    </br>
+                        <label for="date">Date Blog</label>
+                        <input class="form-control"type="date" name="form_date" id="date" required>
+                    </br>
+                        <label for= "content">Content</label>
+                        <textarea class="form-control" name="form_content" id="content"></textarea>
+                    </br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="col-md3"></div>
             </div>
         </div>
     </section>
